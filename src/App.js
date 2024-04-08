@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "../node_modules/react-grid-layout/css/styles.css";
+import "../node_modules/react-resizable/css/styles.css";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import { GameBlock } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="menu-area">
+        <Stack spacing={2} direction="row">
+          <Button variant="contained" color="warning" size="large">
+            Start Game
+          </Button>
+          <Button variant="contained" color="warning" size="large">
+            Restart Game
+          </Button>
+        </Stack>
+      </div>
+      <GameBlock />
     </div>
   );
 }
